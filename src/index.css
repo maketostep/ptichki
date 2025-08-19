@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@font-face {
+  font-family: "UraBumBumSP";
+  src: url("./assets/fonts/UraBumBumSP.eot"); /* IE 9 Compatibility Mode */
+  src:
+    url("./assets/fonts/UraBumBumSP.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("./assets/fonts/UraBumBumSP.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./assets/fonts/UraBumBumSP.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./assets/fonts/UraBumBumSP.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./assets/fonts/UraBumBumSP.svg#UraBumBumSP")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+html {
+  font-family: "UraBumBumSP", sans-serif;
+}
