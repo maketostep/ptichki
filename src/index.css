@@ -18,3 +18,10 @@
 html {
   font-family: "UraBumBumSP", sans-serif;
 }
+
+input,
+select {
+  color: rgba(73, 50, 0, 0.387);
+  border-color: rgba(73, 50, 0, 0.89);
+  border-radius: 10px;
+}

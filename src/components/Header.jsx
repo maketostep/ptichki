@@ -1,15 +1,14 @@
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import logo from "../assets/img/logo.webp";
 export default function Header() {
   return (
-    <header className="flex justify-around p-2 w-full min-h-15 bg-amber-300 rounded-b-4xl">
+    <header className="flex justify-around p-2 mb-7 w-full min-h-15 bg-amber-300 shadow-xl rounded-b-4xl">
       <div className="flex items-center text-3xl">Место для логотипа</div>
       <div className="flex">
         <div className="m-5 border-r-2 border-black" />
         <div className="flex flex-col">
           <h1 className="text-3xl">Женское сообщество</h1>
           <img className="w-75" src={logo} alt="logo" />
-          <h1 className="text-3xl">в городе Ставрополь</h1>
         </div>
         <div className="m-5 border-r-2 border-black" />
       </div>

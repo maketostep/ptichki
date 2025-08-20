@@ -1,17 +1,15 @@
-import ptica from "../assets/img/ptica.webp";
-import ptica2 from "../assets/img/ptica2.webp";
+import Block from "../components/ui/block";
 export default function HomePage() {
   return (
-    <div className="flex flex-col justify-center items-center bg-amber-200 rounded-2xl p-5 m-5">
-      <div className="flex">
-        <img className="w-10 h-7 mt-7" src={ptica2} alt="птица 2" />
-        <h1 className="text-5xl underline underline-offset-15 mb-10">
-          Наш клуб
-        </h1>
-        <img className="w-5 h-5" src={ptica} alt="птица" />
-      </div>
+    <div className="flex flex-col gap-5 m-5">
+      <div className="flex h-50 justify-start items-start gap-5">
+        <Block headerText="Наш клуб" children={<p>Информация</p>} />
 
-      <div className="flex"></div>
+        <Block headerText="Контакты" children={<p>Телеграм и тд</p>} />
+      </div>
+      <div className="flex">
+        <Block headerText="Галерея" children={<p>Фотографии</p>} />
+      </div>
     </div>
   );
 }
