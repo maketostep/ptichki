@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       // Проксируем все запросы с префиксом /api на наш backend Express.js
       "/api": {
-        target: "http://localhost:4000", // адрес нашего backend
+        target: "http://localhost:3000", // адрес нашего backend
         changeOrigin: true, // меняет Origin заголовок на target
         rewrite: (path) => path.replace(/^\/api/, ""), // убирает /api из пути
         secure: false, // если backend без HTTPS
