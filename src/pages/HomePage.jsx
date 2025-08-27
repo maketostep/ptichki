@@ -1,14 +1,23 @@
+import BottomBirds from "../components/home/BottomBirds";
+import ContactChildren from "../components/home/ContactChildren";
+import GalleryChildren from "../components/home/GalleryChildren";
+import InfoChildren from "../components/home/InfoChildren";
 import Block from "../components/ui/block";
+
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-5 m-5">
-      <div className="flex h-50 justify-start items-start gap-5">
-        <Block headerText="Наш клуб" children={<p>Информация</p>} />
+    <div className="flex flex-col gap-5 mt-5 mx-2 md:mx-10">
+      <div className="flex flex-col md:flex-row w-full h-auto justify-start items-stretch gap-5 flex-grow">
+        <Block headerText="Наш клуб" children={<InfoChildren />} />
 
-        <Block headerText="Контакты" children={<p>Телеграм и тд</p>} />
+        <Block
+          headerText="Контакты"
+          children={<ContactChildren />}
+          bottom={<BottomBirds />}
+        />
       </div>
-      <div className="flex">
-        <Block headerText="Галерея" children={<p>Фотографии</p>} />
+      <div className="flex flex-col md:flex-row h-auto justify-start items-stretch gap-5">
+        <Block headerText="Галерея" children={<GalleryChildren />} />
       </div>
     </div>
   );

@@ -15,8 +15,30 @@
       format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
+@font-face {
+  font-family: "DylanBesawCyrillic-Normal";
+  src: url("./assets/fonts/DylanBesawCyrillic-Normal.eot"); /* IE 9 Compatibility Mode */
+  src:
+    url("./assets/fonts/DylanBesawCyrillic-Normal.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("./assets/fonts/DylanBesawCyrillic-Normal.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./assets/fonts/DylanBesawCyrillic-Normal.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./assets/fonts/DylanBesawCyrillic-Normal.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("./assets/fonts/DylanBesawCyrillic-Normal.svg#DylanBesawCyrillic-Normal")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
 html {
   font-family: "UraBumBumSP", sans-serif;
+}
+
+p,
+span {
+  font-family: "DylanBesawCyrillic-Normal", sans-serif;
 }
 
 input,
