@@ -1,9 +1,13 @@
 import { NavLink } from "react-router";
 
-export default function NavigationLinks() {
+export default function NavigationLinks({ handleClose }) {
+  const handleClicked = () => {
+    handleClose();
+  };
   return (
     <>
       <NavLink
+        onClick={handleClicked}
         className={({ isActive }) => (isActive ? "underline" : "")}
         to="/"
       >
@@ -11,6 +15,7 @@ export default function NavigationLinks() {
       </NavLink>
       <h1 className="text-4xl">·</h1>
       <NavLink
+        onClick={handleClicked}
         className={({ isActive }) => (isActive ? "underline" : "")}
         to="/form"
       >
@@ -18,6 +23,7 @@ export default function NavigationLinks() {
       </NavLink>
       <h1 className="text-4xl">·</h1>
       <NavLink
+        onClick={handleClicked}
         className={({ isActive }) => (isActive ? "underline" : "")}
         to="/event"
       >

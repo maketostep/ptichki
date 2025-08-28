@@ -1,15 +1,19 @@
-import logo from "../assets/img/logo.webp";
+import logo from "../assets/img/logo/black.webp";
+import logoMobile from "../assets/img/logo/mobile/black.webp";
 import MobileSidebar from "./mobile/MobileSidebar";
 import NavigationLinks from "./NavigationLinks";
 export default function Header() {
   return (
-    <header className="flex justify-around p-2 mb-7 w-full min-h-15 bg-amber-300 shadow-xl rounded-b-4xl">
-      <div className="flex items-center md:text-3xl">Место для логотипа</div>
+    <header className="flex justify-around p-2 mb-7 w-full min-h-15 bg-green   shadow-xl rounded-b-4xl">
       <div className="flex">
-        <div className="m-5 border-r-2 border-black" />
+        <div className="m-5 border-r-2 hidden md:block border-black" />
         <div className="flex text-center flex-col">
-          <h1 className="md:text-3xl">Женское сообщество</h1>
-          <img className="w-75" src={logo} alt="logo" />
+          <img className="w-75 mr-4 hidden md:block" src={logo} alt="logo" />
+          <img
+            className="w-50 mr-4 block md:hidden"
+            src={logoMobile}
+            alt="logo"
+          />
         </div>
         <div className="m-5 border-r-2 border-black" />
       </div>

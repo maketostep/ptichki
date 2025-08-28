@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Sidebar from "../ui/Sidebar";
-
+import birds from "../../assets/img/logo/mobile/bird-logo.webp";
 export default function MobileSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ export default function MobileSidebar() {
         handleClose={handleClose}
         handleOpen={handleOpen}
         backTextButton="Вернуться"
-        Logo={<img src={""} alt="logo" />}
+        Logo={<img className="w-40 m-10" src={birds} alt="bird-logo" />}
       />
     </div>
   );

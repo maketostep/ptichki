@@ -2,7 +2,7 @@ export default function Form({ handleChangeInfo, handleSubmit }) {
   return (
     <div className="flex m-5">
       <form
-        className="flex flex-col text-center text-3xl gap-2"
+        className="flex flex-col text-center text-2xl md:text-3xl gap-2"
         action="submit"
         onSubmit={handleSubmit}
       >
