@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-
+import bird from "../assets/img/ptica2.webp";
 export default function NavigationLinks({ handleClose }) {
   const handleClicked = () => {
     handleClose();
@@ -13,7 +13,9 @@ export default function NavigationLinks({ handleClose }) {
       >
         Наш клуб
       </NavLink>
-      <h1 className="text-4xl">·</h1>
+      <h1 className="text-4xl">
+        <img className="w-6" src={bird} alt="Птица" />
+      </h1>
       <NavLink
         onClick={handleClicked}
         className={({ isActive }) => (isActive ? "underline" : "")}
@@ -21,7 +23,7 @@ export default function NavigationLinks({ handleClose }) {
       >
         Хочу быть птичкой
       </NavLink>
-      <h1 className="text-4xl">·</h1>
+      <img className="w-6" src={bird} alt="Птица" />
       <NavLink
         onClick={handleClicked}
         className={({ isActive }) => (isActive ? "underline" : "")}

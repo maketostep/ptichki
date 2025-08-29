@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "UraBumBumSP";
-  src: url("./assets/fonts/UraBumBumSP.eot"); /* IE 9 Compatibility Mode */
+  src: url("./assets/fonts/UraBumBumSP.eot");
   src:
     url("./assets/fonts/UraBumBumSP.eot?#iefix") format("embedded-opentype"),
     /* IE < 9 */ url("./assets/fonts/UraBumBumSP.woff2") format("woff2"),
@@ -32,8 +32,33 @@
       format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-VariableFontwght.eot"); /* IE 9 Compatibility Mode */
+  src:
+    url("./assets/fonts/Manrope-VariableFontwght.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("./assets/fonts/Manrope-VariableFontwght.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./assets/fonts/Manrope-VariableFontwght.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./assets/fonts/Manrope-VariableFontwght.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("./assets/fonts/Manrope-VariableFontwght.svg#Manrope-VariableFontwght")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+  font-weight: 100 900; /* от Thin до Black */
+  font-display: swap;
+  font-style: normal;
+}
+
 html {
-  font-family: "UraBumBumSP", sans-serif;
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  background-image: url("/src/assets/img/background/green.webp");
+  background-size: cover;
 }
 
 p,

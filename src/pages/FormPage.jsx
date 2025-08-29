@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Form from "../components/Form";
-import Block from "../components/ui/block";
+import Block from "../components/ui/Block";
 import sendFormData from "../services/sendFormData";
 import { ToastContainer, toast } from "react-toastify";
 
