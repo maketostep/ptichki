@@ -2,44 +2,30 @@
 @config "../tailwind.config.js";
 
 @font-face {
-  font-family: "UraBumBumSP";
-  src: url("./assets/fonts/UraBumBumSP.eot"); /* IE 9 Compatibility Mode */
+  font-family: "NimbusSansRound-Regular";
+  src: url("./assets/fonts/NimbusSansRound-Regular.eot"); /* IE 9 Compatibility Mode */
   src:
-    url("./assets/fonts/UraBumBumSP.eot?#iefix") format("embedded-opentype"),
-    /* IE < 9 */ url("./assets/fonts/UraBumBumSP.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./assets/fonts/UraBumBumSP.woff")
-      format("woff"),
-    /* Firefox >= 3.6, any other modern browser */
-      url("./assets/fonts/UraBumBumSP.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("./assets/fonts/UraBumBumSP.svg#UraBumBumSP")
-      format("svg"); /* Chrome < 4, Legacy iOS */
-}
-
-@font-face {
-  font-family: "DylanBesawCyrillic-Normal";
-  src: url("./assets/fonts/DylanBesawCyrillic-Normal.eot"); /* IE 9 Compatibility Mode */
-  src:
-    url("./assets/fonts/DylanBesawCyrillic-Normal.eot?#iefix")
+    url("./assets/fonts/NimbusSansRound-Regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE < 9 */ url("./assets/fonts/DylanBesawCyrillic-Normal.woff2")
+    /* IE < 9 */ url("./assets/fonts/NimbusSansRound-Regular.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("./assets/fonts/DylanBesawCyrillic-Normal.woff") format("woff"),
+      url("./assets/fonts/NimbusSansRound-Regular.woff") format("woff"),
     /* Firefox >= 3.6, any other modern browser */
-      url("./assets/fonts/DylanBesawCyrillic-Normal.ttf") format("truetype"),
+      url("./assets/fonts/NimbusSansRound-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-      url("./assets/fonts/DylanBesawCyrillic-Normal.svg#DylanBesawCyrillic-Normal")
+      url("./assets/fonts/NimbusSansRound-Regular.svg#NimbusSansRound-Regular")
       format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
 html {
-  font-family: "UraBumBumSP", sans-serif;
-}
-
-p,
-span {
   font-family: "DylanBesawCyrillic-Normal", sans-serif;
 }
+
+/* p,
+span {
+  font-family: "DylanBesawCyrillic-Normal", sans-serif;
+} */
 
 input,
 select {

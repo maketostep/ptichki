@@ -1,15 +1,18 @@
 import { Outlet } from "react-router";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import HeroBlock from "./components/HeroBlock";
+import InformationBlock from "./components/InformationBlock";
+import PosterBlock from "./components/PosterBlock";
+import FAQBlock from "./components/FAQBlock";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen w-full bg-yellow">
-      <Header />
-      <main className="flex-grow">
-        <Outlet />
-      </main>
-      <Footer />
+      <HeroBlock />
+      <InformationBlock />
+      <PosterBlock />
+      <FAQBlock />
     </div>
   );
 }
