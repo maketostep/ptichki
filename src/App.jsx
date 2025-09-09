@@ -1,10 +1,8 @@
-import { Outlet } from "react-router";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import HeroBlock from "./components/HeroBlock";
 import InformationBlock from "./components/InformationBlock";
 import PosterBlock from "./components/PosterBlock";
 import FAQBlock from "./components/FAQBlock";
+import ContactBlock from "./components/ContactBlock";
 
 function App() {
   return (
@@ -13,6 +11,7 @@ function App() {
       <InformationBlock />
       <PosterBlock />
       <FAQBlock />
+      <ContactBlock />
     </div>
   );
 }

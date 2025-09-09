@@ -1,32 +1,20 @@
-import pinkPattern from "../assets/img/pink_pattern.webp";
+import MyBlock from "./ui/MyBlock";
 import DefaultButton from "./ui/DefaultButton";
+import WalpaperPattern from "./ui/WalpaperPattern";
+
 export default function InformationBlock() {
   return (
-    <div className="h-screen bg-white overflow-x-hidden relative">
-      <div className="z-0 ">
-        <img
-          className="absolute right-[-46px] h-200 z-0"
-          src={pinkPattern}
-          alt="Pink Wallpaper Pattern"
-        />
-        <img
-          className="absolute left-[-46px] h-200 z-0"
-          src={pinkPattern}
-          alt="Pink Wallpaper Pattern"
-        />
-      </div>
-      <div className="relative p-15">
-        <div className="w-auto bg-red rounded-2xl z-5 p-5">
-          <h2 className="text-3xl text-center">ТУТ БУДЕТ ТЕКСТ О КЛУБЕ</h2>
-        </div>
-        <div>
-          <div>
-            <h2>ТЕКСТ ОБ ОФФЛАЙН</h2>
-          </div>
-          <div>
-            <h2>ТЕКСТ О ТГ КАНАЛЕ</h2>
-            <DefaultButton text="ссылка на бот тг" />
-          </div>
+    <div className="h-screen bg-white overflow-x-hidden overflow-y-hidden relative">
+      <WalpaperPattern pattern="pink" />
+      <div className="flex flex-col justify-center items-center relative mt-50 gap-15">
+        <MyBlock text="ТУТ БУДЕТ ТЕКСТ О КЛУБЕ" textSize="4xl" />
+
+        <div className="flex justify-center items-center gap-70">
+          <MyBlock text="ТЕКСТ ОБ ОФЛАЙНЕ" />
+          <MyBlock
+            text="ТЕКСТ О ТГ КАНАЛЕ"
+            children={<DefaultButton text="ссылка на бот тг" />}
+          />
         </div>
       </div>
     </div>
