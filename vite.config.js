@@ -5,12 +5,10 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      // Проксируем все запросы с префиксом /api на наш backend Express.js
       "/api": {
-        target: "http://localhost:3000", // адрес нашего backend
-        changeOrigin: true, // меняет Origin заголовок на target
-        rewrite: (path) => path.replace(/^\/api/, ""), // убирает /api из пути
-        secure: false, // если backend без HTTPS
+        target: "https://dabozgofuelog.beget.app",
+        changeOrigin: true,
+        secure: true,
       },
     },
   },

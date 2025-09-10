@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FAQItem = ({ question, answer, isOpen, onClick }) => {
   const contentRef = useRef(null);
   const [height, setHeight] = useState(0);
 
@@ -14,11 +13,13 @@ const FAQItem = ({ question, answer }) => {
   return (
     <div
       className="border-b border-gray-200 pb-4 cursor-pointer"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={onClick}
     >
       <div className="flex justify-between items-center">
-        <p className="text-3xl font-semibold text-gray-800">{question}</p>
-        <span className="text-3xl">{isOpen ? "−" : "+"}</span>
+        <p className="md:text-4xl text-2xl font-semibold text-gray-800">
+          {question}
+        </p>
+        <span className="md:text-3xl text-xl">{isOpen ? "−" : "+"}</span>
       </div>
 
       <div
@@ -35,6 +36,8 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const faqData = [
     { question: "Вопрос 1", answer: "Ответ на вопрос 1" },
     { question: "Вопрос 2", answer: "Ответ на вопрос 2" },
@@ -48,7 +51,13 @@ const FAQ = () => {
     <div className="mx-8 md:mx-34 md:my-15 bg-amber-50 p-8 rounded-4xl shadow-2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {faqData.map((item, index) => (
-          <FAQItem key={index} question={item.question} answer={item.answer} />
+          <FAQItem
+            key={index}
+            question={item.question}
+            answer={item.answer}
+            isOpen={openIndex === index}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+          />
         ))}
       </div>
     </div>
