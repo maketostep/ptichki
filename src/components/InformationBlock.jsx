@@ -16,7 +16,14 @@ export default function InformationBlock() {
           <MyBlock text="ТЕКСТ ОБ ОФЛАЙНЕ" />
           <MyBlock
             text="ТЕКСТ О ТГ КАНАЛЕ"
-            children={<DefaultButton text="ссылка на бот тг" />}
+            children={
+              <DefaultButton
+                text="ссылка на бот тг"
+                handleClick={() =>
+                  window.open("https://t.me/@ptichkirobot", "_blank")
+                }
+              />
+            }
           />
         </div>
       </div>
