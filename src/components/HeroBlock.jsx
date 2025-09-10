@@ -3,12 +3,12 @@ import DefaultButton from "./ui/DefaultButton";
 
 export default function HeroBlock() {
   return (
-    <div id="start" className="flex flex-col h-screen md:p-20 p-5 bg-green">
-      <h1 className="md:hidden block text-2xl">
+    <div id="start" className="flex flex-col h-screen md:p-20 p-5 bg-green ">
+      <h1 className="md:hidden block text-2xl select-none">
         Женское комьюнити в Ставрополе
       </h1>
       <div className="flex w-auto h-auto justify-between">
-        <h1 className="hidden md:block text-4xl">
+        <h1 className="hidden md:block text-4xl select-none hover:scale-z-500 transition-all">
           Женское комьюнити
           <br /> в Ставрополе
         </h1>
@@ -28,7 +28,11 @@ export default function HeroBlock() {
         </div>
       </div>
       <div className="flex h-full justify-center items-center content-center">
-        <img className="w-100" src={pinkLogo} alt="pink logo" />
+        <img
+          className="w-100 p-5 rounded-3xl hover:scale-102 transition-all hover:shadow-2xl"
+          src={pinkLogo}
+          alt="pink logo"
+        />
       </div>
     </div>
   );
