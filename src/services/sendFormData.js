@@ -1,7 +1,7 @@
 export default async function sendFormData(data) {
   console.log(data);
   try {
-    const res = await fetch("/api/user-form", {
+    const res = await fetch("https://dabozgofuelog.beget.app/api/user-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

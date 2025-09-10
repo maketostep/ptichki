@@ -10,7 +10,7 @@ export default function MyModal({ modalIsOpen, setModalIsOpen }) {
     <ReactModal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      overlayClassName="fixed inset-0 bg-black/50 flex justify-center items-center"
+      overlayClassName="fixed inset-0 bg-black/50 flex justify-center items-center z-5"
       className="bg-white rounded-2xl p-6 w-full max-w-lg relative"
     >
       {/* Кнопка закрытия */}
