@@ -35,17 +35,8 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   );
 };
 
-const FAQ = () => {
+const FAQ = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqData = [
-    { question: "Вопрос 1", answer: "Ответ на вопрос 1" },
-    { question: "Вопрос 2", answer: "Ответ на вопрос 2" },
-    { question: "Вопрос 3", answer: "Ответ на вопрос 3" },
-    { question: "Вопрос 4", answer: "Ответ на вопрос 4" },
-    { question: "Вопрос 5", answer: "Ответ на вопрос 5" },
-    { question: "Вопрос 6", answer: "Ответ на вопрос 6" },
-  ];
 
   return (
     <div className="mx-8 md:mx-34 md:my-15 bg-amber-50 p-8 rounded-4xl shadow-2xl">

@@ -1,26 +1,24 @@
 import pinkLogo from "../assets/img/logo/pink.webp";
+import { heroConfig } from "./mainConfig";
 import DefaultButton from "./ui/DefaultButton";
 
 export default function HeroBlock() {
+  const { headerText, aboutButtonText, formButtonText } = heroConfig;
   return (
     <div id="start" className="flex flex-col h-screen md:p-20 p-5 bg-green ">
-      <h1 className="md:hidden block text-2xl select-none">
-        Женское комьюнити в Ставрополе
-      </h1>
-      <div className="flex w-auto h-auto justify-between">
-        <h1 className="hidden md:block text-4xl select-none hover:scale-z-500 transition-all">
-          Женское комьюнити
-          <br /> в Ставрополе
+      <div className="flex md:flex-row flex-col w-auto h-auto justify-between">
+        <h1 className="md:w-125 text-4xl select-none hover:scale-z-500 transition-all">
+          {headerText}
         </h1>
         <div className="md:flex justify-end flex-1 space-y-5 md:space-y-0 md:space-x-10">
           <DefaultButton
-            text="о клубе"
+            text={aboutButtonText}
             handleClick={() =>
               (window.location.href = window.location.origin + "#about")
             }
           />
           <DefaultButton
-            text="регистрация на события"
+            text={formButtonText}
             handleClick={() =>
               (window.location.href = window.location.origin + "#events")
             }

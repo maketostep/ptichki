@@ -1,8 +1,17 @@
 import MyBlock from "./ui/MyBlock";
 import DefaultButton from "./ui/DefaultButton";
 import WalpaperPattern from "./ui/WalpaperPattern";
+import { informationConfig } from "./mainConfig";
 
 export default function InformationBlock() {
+  const {
+    mainTextInformationBlock,
+    leftTextInformationBlock,
+    rightTextInformationBlock,
+    leftDescriptionInformationBlock,
+    buttonText,
+    buttonUrl,
+  } = informationConfig;
   return (
     <div
       id="about"
@@ -10,18 +19,19 @@ export default function InformationBlock() {
     >
       <WalpaperPattern pattern="pink" />
       <div className="flex flex-col justify-center items-center relative mt-50 gap-15">
-        <MyBlock text="ТУТ БУДЕТ ТЕКСТ О КЛУБЕ" textSize="4xl" />
+        <MyBlock text={mainTextInformationBlock} textSize="4xl" />
 
         <div className="flex md:flex-row space-y-10 md:space-y-0 flex-col justify-center items-center gap-5 md:gap-70">
-          <MyBlock text="ТЕКСТ ОБ ОФЛАЙНЕ" />
           <MyBlock
-            text="ТЕКСТ О ТГ КАНАЛЕ"
+            text={leftTextInformationBlock}
+            children={leftDescriptionInformationBlock}
+          />
+          <MyBlock
+            text={rightTextInformationBlock}
             children={
               <DefaultButton
-                text="ссылка на бот тг"
-                handleClick={() =>
-                  window.open("https://t.me/@ptichkirobot", "_blank")
-                }
+                text={buttonText}
+                handleClick={() => window.open(buttonUrl, "_blank")}
               />
             }
           />
