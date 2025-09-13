@@ -4,7 +4,7 @@ export default function WalpaperPattern({ pattern }) {
   if (pattern === "pink") {
     return (
       <img
-        className="absolute object-cover right-[0px] h-215 md:h-auto z-0"
+        className="absolute object-cover background-repeat right-[0px] h-215 md:h-auto z-0"
         src={bgPink}
         alt="Pink Wallpaper Pattern"
       />
