@@ -31,15 +31,31 @@ export default function PosterBlock() {
       className="flex flex-col relative items-center h-[1080px] px-2 sm:px-4 md:px-10 py-6 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${blockThree})` }}
     >
-      {/* <h1 className="text-white text-3xl sm:text-5xl md:text-7xl font-extrabold mt-6 mb-4 sm:mb-8 md:mb-10 text-center">
-        {headerText}
-      </h1> */}
-      <h2 className="text-white text-center font-semibold absolute w-[500px] leading-[66px] rotate-[355deg] break-words top-[34px] left-[100px] text-[56px]">
+      {/* Заголовок */}
+      <h2
+        className="
+          text-white text-center font-semibold break-words 
+          text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px] leading-tight
+          mt-6 mb-8
+          2xl:absolute 2xl:rotate-[355deg] 2xl:w-[500px] 2xl:leading-[66px] 2xl:top-[34px] 2xl:left-[100px]
+        "
+      >
         {secondText}
       </h2>
 
-      <div className="flex flex-col relative md:flex-row justify-center items-center-safe gap-6 md:gap-16 lg:gap-24 w-full">
-        <div className="bg-gray-200 absolute top-[233px] left-[615px] rounded-lg w-[575px] h-[714px]">
+      <div
+        className="
+          flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 lg:gap-16 w-full
+          2xl:relative 2xl:gap-24
+        "
+      >
+        {/* Постер */}
+        <div
+          className="
+            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-lg overflow-hidden bg-gray-200
+            2xl:absolute 2xl:top-[233px] 2xl:left-[615px] 2xl:w-[575px] 2xl:h-[714px]
+          "
+        >
           {poster ? (
             <img
               src={poster}
@@ -50,16 +66,26 @@ export default function PosterBlock() {
             <p>Загрузка...</p>
           )}
         </div>
-        <div className="flex flex-col justify-center items-center mt-4 md:mt-0 gap-4 md:gap-6 max-w-xl">
-          <div className="p-5 absolute top-[300px] left-[1297px] space-y-6">
-            <p className=" bg-white rounded-4xl p-5 shadow-md whitespace-pre-line text-base sm:text-lg md:text-2xl">
-              {description}
-            </p>
-            <TelegramButton
-              text={actionButtonText}
-              handleClick={() => setModalIsOpen(true)}
-            />
-          </div>
+
+        {/* Описание + кнопка */}
+        <div
+          className="
+            flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 mt-6 md:mt-0 max-w-xl
+            2xl:absolute 2xl:top-[300px] 2xl:left-[1297px]
+          "
+        >
+          <p
+            className="
+              bg-white rounded-3xl p-4 sm:p-6 shadow-md whitespace-pre-line 
+              text-sm sm:text-base md:text-lg lg:text-2xl text-center md:text-left
+            "
+          >
+            {description}
+          </p>
+          <TelegramButton
+            text={actionButtonText}
+            handleClick={() => setModalIsOpen(true)}
+          />
         </div>
       </div>
 

@@ -26,13 +26,13 @@ export default function PartnersBlock() {
   return (
     <div
       id="partners"
-      className="flex flex-col relative items-center h-[521px] px-2 sm:px-4 md:px-10 py-6 bg-cover bg-center bg-no-repeat"
+      className="flex flex-col flex-grow relative items-center h-[521px] px-2 sm:px-4 md:px-10 py-6 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${blockFour})` }}
     >
-      <h1 className="text-red mt-28 text-[56px] font-bold">
+      <h1 className="text-red mt-28 md:text-[56px] text-2xl font-bold">
         Птички получают скидки:
       </h1>
-      <div className="flex w-[1687px] flex-row justify-center items-center gap-20 mt-10">
+      <div className="flex justify-center flex-grow flex-wrap items-center 2xl:gap-20 md:gap-10 gap-5 mt-10">
         {posters ? (
           posters.map((p) => (
             <img
@@ -40,7 +40,7 @@ export default function PartnersBlock() {
               src={"https://dabozgofuelog.beget.app" + p.image_url}
               alt={p.name}
               onClick={() => handleClick(p)}
-              className="w-54 h-54 cursor-pointer object-cover rounded-2xl hover:scale-105 transition-transform duration-300"
+              className="2xl:w-54 2xl:h-54 md:w-40 md:h-40 w-20 h-20 cursor-pointer object-cover rounded-2xl hover:scale-105 transition-transform duration-300"
             />
           ))
         ) : (
@@ -53,12 +53,12 @@ export default function PartnersBlock() {
         setModalIsOpen={setModalIsOpen}
         children={
           <div className="flex flex-col justify-center items-center">
-            <p className="whitespace-pre-line text-center">
+            <p className="2xl:text-4xl whitespace-pre-line text-center">
               {selectedPoster?.description}
             </p>
             <div className="flex justify-center mt-4">
               <button
-                className="bg-green hover:bg text-white px-4 py-2 rounded"
+                className="bg-green 2xl:text-3xl hover:bg-red text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
                 onClick={() => {
                   setModalIsOpen(false);
                   window.location.href = window.location.origin + "#events";
@@ -70,7 +70,7 @@ export default function PartnersBlock() {
                 onClick={() =>
                   window.open(selectedPoster?.partner_url, "_blank")
                 }
-                className="ml-4"
+                className="bg-red 2xl:text-3xl ml-4 hover:bg-green text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
               >
                 Сайт-партнера
               </button>
