@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 // Схема валидации
 const schema = yup.object().shape({
-  name: yup.string().required("Введите имя"),
+  name: yup.string().required("Введите имя, и фамилию"),
   phone: yup
     .string()
     .matches(/^[0-9+\-()\s]{6,20}$/, "Некорректный номер")
@@ -48,7 +48,7 @@ export default function MyForm({ closeModal }) {
         {/* Имя */}
         <div>
           <label className="block text-xl font-medium text-gray-700 mb-1">
-            Имя
+            Имя, Фамилия
           </label>
           <input
             type="text"

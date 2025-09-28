@@ -4,13 +4,15 @@ import PosterBlock from "./components/PosterBlock";
 import FAQBlock from "./components/FAQBlock";
 import ContactBlock from "./components/ContactBlock";
 import { Slide, ToastContainer } from "react-toastify";
+import PartnersBlock from "./components/PartnersBlock";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-yellow">
+    <div className="flex flex-col w-full">
       <HeroBlock />
       <InformationBlock />
       <PosterBlock />
+      <PartnersBlock />
       <FAQBlock />
       <ContactBlock />
       <ToastContainer

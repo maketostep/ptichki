@@ -12,14 +12,16 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 
   return (
     <div
-      className="border-b border-gray-200 pb-4 cursor-pointer"
+      className="bg-white w-full p-10 rounded-4xl border-b border-gray-200 cursor-pointer"
       onClick={onClick}
     >
       <div className="flex justify-between items-center">
         <p className="md:text-4xl text-2xl font-semibold text-gray-800">
           {question}
         </p>
-        <span className="md:text-3xl text-xl">{isOpen ? "−" : "+"}</span>
+        <span className="md:text-3xl text-xl text-red font-bold bg-yellow rounded-full w-8 h-8 flex justify-center items-center">
+          {isOpen ? "−" : "+"}
+        </span>
       </div>
 
       <div
@@ -29,7 +31,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         }}
         className="overflow-hidden mt-2 text-gray-700 text-lg"
       >
-        <div ref={contentRef}>{answer}</div>
+        <div ref={contentRef}>
+          <p className="text-2xl whitespace-pre-line">{answer}</p>
+        </div>
       </div>
     </div>
   );
@@ -39,8 +43,8 @@ const FAQ = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="mx-8 md:mx-34 md:my-15 bg-amber-50 p-8 rounded-4xl shadow-2xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="flex justify-center mt-61 mb-10 items-center content-center flex-col">
+      <div className="w-[1140px] grid grid-cols-1 gap-4">
         {faqData.map((item, index) => (
           <FAQItem
             key={index}

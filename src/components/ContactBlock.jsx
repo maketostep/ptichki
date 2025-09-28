@@ -1,30 +1,36 @@
 import { PiTelegramLogo } from "react-icons/pi";
-import { FaLongArrowAltUp } from "react-icons/fa";
-import whiteLogo from "../assets/img/logo/white.webp";
+import pinkLogo from "../assets/img/logo/pink.webp";
+import arrowUp from "../assets/img/arrowUp.png";
 import { contactConfig } from "./mainConfig";
-
+import blockSix from "../assets/img/background/blockSix.png";
+import vkIcon from "../assets/img/vk.png";
+import tgIcon from "../assets/img/tg.png";
 export default function ContactBlock() {
-  const { headerText, blockText, firstButtonUrl } = contactConfig;
+  const { headerText, telegramButtonUrl, vkButtonUrl } = contactConfig;
   return (
-    <div className="h-full bg-red flex flex-col md:flex-row justify-center items-center md:justify-between px-5 md:px-25 py-10">
-      <div className="flex flex-col mb-10 md:mb-0 md:mx-25 w-full md:w-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-5 sm:mt-10">
-          {headerText}
-        </h1>
-        <div className="flex mt-5 sm:mt-10 gap-3 sm:gap-5">
+    <div
+      className="h-[881px] relative bg-center bg-cover bg-no-repeat bg-red flex flex-col md:flex-row justify-start items-end px-15"
+      style={{ backgroundImage: `url(${blockSix})` }}
+    >
+      <div className="flex flex-col mb-10 justify-end content-end">
+        <h1 className="text-[36px] font-bold mt-5 sm:mt-10">{headerText}</h1>
+        <div className="flex mt-5 gap-2">
           <div
-            onClick={() => window.open(firstButtonUrl, "_blank")}
-            className="flex p-3 sm:p-5 rounded-full bg-yellow"
+            onClick={() => window.open(telegramButtonUrl, "_blank")}
+            className="flex p-3 mb-25 rounded-full"
           >
-            <PiTelegramLogo className="h-8 w-8 sm:h-15 sm:w-15" />
+            <img src={tgIcon} className="h-17.5 w-17.5" />
+          </div>
+
+          <div
+            onClick={() => window.open(vkButtonUrl, "_blank")}
+            className="flex p-3 mb-25 rounded-full "
+          >
+            <img src={vkIcon} className="h-17.5 w-17.5" />
           </div>
         </div>
 
-        <div className="mt-5 sm:mt-10 border border-black rounded-3xl mb-5 sm:mb-10 p-5 sm:p-15">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
-            {blockText}
-          </h1>
-        </div>
+        <p className="text-[24px] font-semibold">Юридическая информация</p>
       </div>
 
       <div className="flex flex-col justify-between items-end md:mx-25 w-full md:w-auto">
@@ -32,17 +38,13 @@ export default function ContactBlock() {
           onClick={() =>
             (window.location.href = window.location.origin + "#start")
           }
-          className="mt-5 sm:mt-10 flex text-2xl sm:text-4xl md:text-5xl text-white cursor-pointer"
+          className="absolute left-[1775.22px] top-[451.22px] cursor-pointer"
         >
-          Наверх <FaLongArrowAltUp className="ml-2" />
+          <img src={arrowUp} alt="" />
         </button>
-        <div className="flex mt-5 sm:mt-10">
-          <img
-            src={whiteLogo}
-            alt="White Logo"
-            className="h-16 sm:h-50 md:h-75 w-auto"
-          />
-        </div>
+      </div>
+      <div className="absolute top-[618.66px] left-[1277px]">
+        <img src={pinkLogo} alt="Pink Logo" className="h-[202px] w-auto" />
       </div>
     </div>
   );
