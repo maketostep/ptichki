@@ -79,7 +79,7 @@ export default function PartnersAdmin() {
           type="file"
           ref={fileInputRef} // подключаем ref
           onChange={(e) => setFile(e.target.files[0])}
-          className="mr-2 border-amber-300 border-2 rounded-lg p-2"
+          className="mr-2 border-amber-300 border-2 rounded-lg p-2 w-full sm:w-auto"
         />
         <button
           type="submit"
@@ -93,14 +93,26 @@ export default function PartnersAdmin() {
 
       <ul>
         {partners.map((p) => (
-          <li key={p.id} className="flex items-center gap-4 mb-4">
+          <li
+            key={p.id}
+            className="flex flex-wrap border border-red rounded-xl p-5 items-center gap-4 mb-4"
+          >
             <img
               src={`https://dabozgofuelog.beget.app${p.image_url}`}
               alt=""
               className="w-24 h-24 object-cover rounded-2xl"
             />
-            <span>{p.description}</span>
-            <span>{p.partner_url}</span>
+            <p className="whitespace-pre-line border p-2 rounded-2xl border-green">
+              {p.description}
+            </p>
+            <a
+              className="underline"
+              href={p.partner_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {p.partner_url}
+            </a>
             <button
               onClick={() => handleDelete(p.id)}
               className="bg-red-500 text-white px-3 py-1 rounded"
