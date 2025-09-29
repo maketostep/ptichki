@@ -8,14 +8,14 @@ export default function ContactBlock() {
   const { headerText, telegramButtonUrl, vkButtonUrl } = contactConfig;
   return (
     <div
-      className="h-[881px] relative bg-center bg-cover bg-no-repeat bg-red flex flex-col md:flex-row justify-between items-end px-15"
+      className="h-[881px] relative bg-center bg-cover bg-no-repeat bg-red flex flex-col md:flex-row justify-between items-end md:px-15 px-5"
       style={{ backgroundImage: `url(${blockSix})` }}
     >
-      <div className="flex flex-col mb-10 justify-end content-end">
-        <h1 className="md:text-[36px] text-2xl font-bold md:mt-5 mt-45 sm:mt-10">
+      <div className="flex w-full flex-col mb-10 justify-end content-end">
+        <h1 className="w-full md:text-[36px] md:text-start text-center text-[26px] font-extrabold md:mt-5 mt-50 sm:mt-10">
           {headerText}
         </h1>
-        <div className="flex md:mt-5 mt-15 gap-2">
+        <div className="flex md:justify-start justify-center md:mt-5 mt-15 gap-2">
           <div
             onClick={() => window.open(telegramButtonUrl, "_blank")}
             className="flex p-3 md:mb-25 rounded-full"
@@ -31,12 +31,12 @@ export default function ContactBlock() {
           </div>
         </div>
 
-        <a className="md:text-[24px] text-lg font-semibold underline cursor-pointer">
+        <a className="md:text-[24px] md:text-start text-center text-lg font-semibold underline cursor-pointer">
           Юридическая информация
         </a>
       </div>
 
-      <div className="flex flex-col content-center items-end gap-15">
+      <div className="flex flex-col content-center md:items-end items-center gap-15">
         <button
           onClick={() =>
             (window.location.href = window.location.origin + "#start")

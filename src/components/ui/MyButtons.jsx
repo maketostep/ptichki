@@ -29,9 +29,9 @@ export function GreenButton({ text, handleClick }) {
   return (
     <button
       onClick={handleClick}
-      className={`bg-green md:px-15 md:py-10 px-10 py-8 text-white border-white md:border-[10px] border-4 rounded-full cursor-pointer hover:text-red hover:bg-yellow transition-all duration-300`}
+      className={`bg-green md:px-15 md:py-10 px-10 py-6 text-white border-white md:border-[10px] border-4 rounded-full cursor-pointer hover:text-red hover:bg-yellow transition-all duration-300`}
     >
-      <span className={`2xl:text-[40px] text-3xl font-semibold`}>{text}</span>
+      <span className={`2xl:text-[40px] text-3xl font-bold`}>{text}</span>
     </button>
   );
 }
@@ -42,7 +42,7 @@ export function TelegramButton({ text, handleClick }) {
       onClick={handleClick}
       className={`bg-green md:px-15 md:py-10 px-10 py-6 text-white border-white md:border-[10px] border-4 rounded-full cursor-pointer hover:text-red hover:bg-yellow transition-all duration-300`}
     >
-      <span className={`2xl:text-[40px] text-4xl font-semibold`}>{text}</span>
+      <span className={`2xl:text-[40px] text-3xl font-bold`}>{text}</span>
     </button>
   );
 }

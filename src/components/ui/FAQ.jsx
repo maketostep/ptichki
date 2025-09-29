@@ -12,7 +12,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 
   return (
     <div
-      className="bg-white w-full md:p-10 p-5 rounded-4xl border-b border-gray-200 cursor-pointer"
+      className="bg-white w-full md:p-10 p-6 rounded-4xl cursor-pointer"
       onClick={onClick}
     >
       <div className="flex justify-between items-center">
@@ -43,8 +43,8 @@ const FAQ = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="flex justify-center mt-30 mb-10 items-center content-center flex-col">
-      <div className="md:w-[1140px] m-5 grid grid-cols-1 gap-5">
+    <div className="flex justify-center mt-40 items-center content-center flex-col">
+      <div className="md:w-[1140px] m-5 grid grid-cols-1 gap-7">
         {faqData.map((item, index) => (
           <FAQItem
             key={index}

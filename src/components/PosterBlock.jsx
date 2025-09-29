@@ -36,7 +36,7 @@ export default function PosterBlock() {
         className="
           text-white text-center font-semibold break-words 
           text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px] leading-tight
-          mt-6 mb-8
+          md:mt-6 mb-8
           2xl:absolute 2xl:rotate-[355deg] 2xl:w-[500px] 2xl:leading-[66px] 2xl:top-[34px] 2xl:left-[100px]
         "
       >
@@ -52,7 +52,7 @@ export default function PosterBlock() {
         {/* Постер */}
         <div
           className="
-            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-lg overflow-hidden bg-gray-200
+            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200
             2xl:absolute 2xl:top-[233px] 2xl:left-[615px] 2xl:w-[575px] 2xl:h-[714px]
           "
         >
