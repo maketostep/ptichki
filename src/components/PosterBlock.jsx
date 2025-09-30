@@ -52,7 +52,7 @@ export default function PosterBlock() {
         {/* Постер */}
         <div
           className="
-            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200
+            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-2xl bg-gray-200
             2xl:absolute 2xl:top-[233px] 2xl:left-[615px] 2xl:w-[575px] 2xl:h-[714px]
           "
         >
@@ -70,18 +70,20 @@ export default function PosterBlock() {
         {/* Описание + кнопка */}
         <div
           className="
-            flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 mt-6 md:mt-0 max-w-xl
-            2xl:absolute 2xl:top-[300px] 2xl:left-[1297px]
+            flex flex-col justify-start items-center md:items-start gap-4 md:gap-6 mt-6 md:mt-0 max-w-xl
+            2xl:absolute 2xl:top-[250px] 2xl:left-[1297px]
           "
         >
-          <p
+          <div
             className="
-              bg-white rounded-3xl p-4 sm:p-6 shadow-md whitespace-pre-line 
+              bg-white border-10 border-amber-50 rounded-l-3xl rounded-r-sm p-4 sm:p-6 shadow-md whitespace-pre-line 
               text-sm sm:text-base md:text-lg lg:text-2xl text-center md:text-left
+              max-h-80 md:max-h-126 overflow-y-scroll poster-scroll
             "
+            style={{ width: "min(100%, 480px)" }}
           >
             {description}
-          </p>
+          </div>
           <TelegramButton
             text={actionButtonText}
             handleClick={() => setModalIsOpen(true)}

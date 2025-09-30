@@ -8,6 +8,7 @@ import element2 from "../assets/heroBlock/element2.png";
 import photo1 from "../assets/heroBlock/photo1.png";
 import photo2 from "../assets/heroBlock/photo2.png";
 import { isMobile } from "react-device-detect";
+import { scrollToSection } from "../utils/navigation";
 export default function HeroBlock() {
   const { headerText, aboutButtonText, formButtonText } = heroConfig;
   return (
@@ -32,16 +33,12 @@ export default function HeroBlock() {
             size="xl"
             color="red"
             text={aboutButtonText}
-            handleClick={() =>
-              (window.location.href = window.location.origin + "#about")
-            }
+            handleClick={() => scrollToSection("about")}
           />
           <SecondButton
             size="xl"
             text={formButtonText}
-            handleClick={() =>
-              (window.location.href = window.location.origin + "#events")
-            }
+            handleClick={() => scrollToSection("events")}
           />
         </div>
       </div>
@@ -67,7 +64,7 @@ export default function HeroBlock() {
           alt="element 2"
         />
         <img
-          className="w-[360px] sm:w-[420px] md:w-[680px] lg:w-[910px] absolute top-[500px] md:top-[280px] lg:top-[310px]"
+          className="w-[345px] sm:w-[420px] md:w-[680px] lg:w-[910px] md:absolute md:block flex content-center mt-25 md:mt-0 top-[500px] md:top-[280px] lg:top-[310px]"
           src={pinkLogo}
           alt="pink logo"
         />
