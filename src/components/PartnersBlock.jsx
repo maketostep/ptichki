@@ -32,7 +32,7 @@ export default function PartnersBlock() {
       <h1 className="text-red mt-28 md:text-[36px] 2xl:text-[56px] text-[28px] font-bold">
         Птички получают скидки:
       </h1>
-      <div className="flex justify-center flex-wrap items-center 2xl:gap-20 gap-5 mt-10 md:mt-0">
+      <div className="flex justify-center md:flex-grow flex-wrap items-center 2xl:gap-20 md:gap-15 gap-5 mt-10 md:mt-0">
         {posters ? (
           posters.map((p) => (
             <img
@@ -40,7 +40,7 @@ export default function PartnersBlock() {
               src={"https://dabozgofuelog.beget.app" + p.image_url}
               alt={p.name}
               onClick={() => handleClick(p)}
-              className="2xl:w-54 2xl:h-54 md:w-30 md:h-30 w-26 h-auto cursor-pointer object-cover rounded-2xl hover:scale-105 transition-transform duration-300"
+              className="2xl:w-54 2xl:h-54 md:w-40 md:h-40 w-26 h-auto cursor-pointer object-cover rounded-2xl hover:scale-105 transition-transform duration-300"
             />
           ))
         ) : (

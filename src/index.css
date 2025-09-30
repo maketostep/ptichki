@@ -54,6 +54,38 @@ select {
   border-radius: 10px;
 }
 
+.hero-block-bg {
+  background-image: url("./assets/img/background/blockOneMobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1536px) {
+  .hero-block-bg {
+    background-image: url("./assets/img/background/blockOne.png");
+  }
+}
+
+.poster-block-bg {
+  background-image: url("./assets/img/background/blockThree.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .poster-block-bg {
+    background-image: url("./assets/img/background/blockThree_Notebook.png");
+  }
+}
+
+@media (min-width: 1536px) {
+  .poster-block-bg {
+    background-image: url("./assets/img/background/blockThree.png");
+  }
+}
+
 .poster-scroll {
   scrollbar-width: thin;
   scrollbar-color: rgba(238, 105, 119, 0.7) rgba(243, 229, 124, 0.5);

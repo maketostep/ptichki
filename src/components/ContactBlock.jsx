@@ -45,7 +45,11 @@ export default function ContactBlock() {
           <img src={arrowUp} alt="arrowUp" />
         </button>
         <div className="flex justify-end mb-10">
-          <img src={pinkLogo} alt="Pink Logo" className="2xl:w-[1500px]" />
+          <img
+            src={pinkLogo}
+            alt="Pink Logo"
+            className="2xl:w-[1100px] md:w-[800px]"
+          />
         </div>
       </div>
     </div>

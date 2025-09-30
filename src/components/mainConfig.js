@@ -62,5 +62,5 @@ export const contactConfig = {
   headerText: "Чирикай вместе с нами!",
   blockText: "юридический блок",
   telegramButtonUrl: "https://t.me/ptichkirobot",
-  vkButtonUrl: "https://vk.com/ptichkirobot",
+  vkButtonUrl: "https://vk.com/club233005848",
 };

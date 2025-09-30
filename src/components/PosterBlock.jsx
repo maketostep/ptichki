@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import MyModal from "./ui/MyModal";
 import { posterConfig } from "./mainConfig";
 import { getPosters } from "../services/postersService";
-import blockThree from "../assets/img/background/blockThree.png";
 import { TelegramButton } from "./ui/MyButtons";
 import MyForm from "./ui/MyForm";
+import cloud from "../assets/posterBlock/cloud.png";
 
 export default function PosterBlock() {
   const [poster, setPoster] = useState(null);
@@ -26,68 +26,48 @@ export default function PosterBlock() {
   const { secondText, actionButtonText } = posterConfig;
 
   return (
-    <div
+    <section
       id="events"
-      className="flex flex-col relative items-center h-[1080px] px-2 sm:px-4 md:px-10 py-6 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${blockThree})` }}
+      className="poster-block-bg h-[1080px] relative flex xl:flex-row flex-col justify-center 2xl:px-4 sm:px-6 md:px-10 2xl:py-12"
     >
-      {/* Заголовок */}
-      <h2
-        className="
-          text-white text-center font-semibold break-words 
-          text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px] leading-tight
-          md:mt-6 mb-8
-          2xl:absolute 2xl:rotate-[355deg] 2xl:w-[500px] 2xl:leading-[66px] 2xl:top-[34px] 2xl:left-[100px]
-        "
-      >
+      <h2 className="text-white xl:mt-18 2xl:mt-2 2xl:ml-[200px] xl:rotate-[-6deg] text-center font-semibold break-words text-[28px] sm:text-[36px] md:text-[44px] 2xl:text-[56px] leading-tight">
         {secondText}
       </h2>
+      <div className="w-full max-w-full flex flex-col items-center xl:mt-48">
+        <img
+          src={cloud}
+          alt="cloud"
+          className="2xl:hidden hidden md:block absolute top-15 xl:top-5 right-2 self-end w-32 md:w-52 2xl:w-60 z-0"
+        />
 
-      <div
-        className="
-          flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 lg:gap-16 w-full
-          2xl:relative 2xl:gap-24
-        "
-      >
-        {/* Постер */}
-        <div
-          className="
-            w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] :max-w-[700px] aspect-[3/4] rounded-2xl bg-gray-200
-            2xl:absolute 2xl:top-[233px] 2xl:left-[615px] 2xl:w-[575px] 2xl:h-[714px]
-          "
-        >
-          {poster ? (
-            <img
-              src={poster}
-              alt="Poster"
-              className="w-full h-full object-cover rounded-xl"
-            />
-          ) : (
-            <p>Загрузка...</p>
-          )}
-        </div>
+        <div className="2xl:mt-20 xl:mt-36 w-full flex flex-col xl:flex-row justify-start">
+          <div className="flex flex-col xl:flex-row xl:items-start items-center gap-10 relative">
+            <div className="flex justify-start">
+              <div className="w-[320px] sm:w-[340px] md:w-[320px] 2xl:w-[480px] aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
+                {poster ? (
+                  <img
+                    src={poster}
+                    alt="Poster"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <p className="text-center text-white">Загрузка...</p>
+                )}
+              </div>
+            </div>
 
-        {/* Описание + кнопка */}
-        <div
-          className="
-            flex flex-col justify-start items-center md:items-start gap-4 md:gap-6 mt-6 md:mt-0 max-w-xl
-            2xl:absolute 2xl:top-[250px] 2xl:left-[1297px]
-          "
-        >
-          <div
-            className="
-              bg-white border-10 border-amber-50 rounded-l-3xl rounded-r-sm p-4 sm:p-6 shadow-md whitespace-pre-line 
-              text-sm sm:text-base md:text-lg lg:text-2xl text-center md:text-left
-              max-h-80 md:max-h-126 overflow-y-scroll poster-scroll
-            "
-            style={{ width: "min(100%, 480px)" }}
-          >
-            {description}
+            <div className="h-full w-[300px] sm:w-[320px] md:w-[320px] 2xl:w-[420px] flex flex-col justify-end-safe gap-6">
+              <div className="bg-white border-4 border-b-0 border-t-yellow border-r-green border-l-red rounded-3xl rounded-r-xl p-4 sm:p-6 shadow-md whitespace-pre-line text-sm sm:text-base md:text-md 2xl:text-2xl text-center md:text-left max-h-80 xl:max-h-108 overflow-y-auto poster-scroll w-full hover:bg-gray-100 hover:scale-102 transition-all duration-300">
+                {description}
+              </div>
+              <div className="flex xl:justify-start justify-center">
+                <TelegramButton
+                  text={actionButtonText}
+                  handleClick={() => setModalIsOpen(true)}
+                />
+              </div>
+            </div>
           </div>
-          <TelegramButton
-            text={actionButtonText}
-            handleClick={() => setModalIsOpen(true)}
-          />
         </div>
       </div>
 
@@ -96,6 +76,6 @@ export default function PosterBlock() {
         setModalIsOpen={setModalIsOpen}
         children={<MyForm closeModal={() => setModalIsOpen(false)} />}
       />
-    </div>
+    </section>
   );
 }

@@ -12,11 +12,13 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 
   return (
     <div
-      className="bg-white w-full md:p-10 p-6 rounded-4xl cursor-pointer"
+      className={`bg-white w-full md:p-8 p-6 cursor-pointer transition-all duration-300 ${
+        isOpen ? "rounded-2xl" : "rounded-[50px]"
+      }`}
       onClick={onClick}
     >
       <div className="flex justify-between items-center">
-        <p className="md:text-4xl text-2xl font-semibold text-gray-800">
+        <p className="md:text-3xl text-2xl font-semibold text-gray-800">
           {question}
         </p>
         <span className="md:text-3xl text-xl text-red font-bold bg-yellow rounded-full md:w-8 md:h-8 py-0.5 px-2 md:py-0 md:px-0 flex justify-center items-center">
@@ -43,8 +45,8 @@ const FAQ = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="flex justify-center mt-40 items-center content-center flex-col">
-      <div className="md:w-[1140px] m-5 grid grid-cols-1 gap-7">
+    <div className="flex justify-center mt-25 items-center content-center flex-col">
+      <div className="xl:w-[1000px] md:w-[600px] m-5 grid grid-cols-1 gap-7">
         {faqData.map((item, index) => (
           <FAQItem
             key={index}
