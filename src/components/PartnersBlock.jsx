@@ -29,10 +29,10 @@ export default function PartnersBlock() {
       className="flex flex-col relative items-center h-[521px] px-2 sm:px-4 md:px-10 py-6 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${blockFour})` }}
     >
-      <h1 className="text-red mt-28 md:text-[36px] 2xl:text-[56px] text-[28px] font-bold">
+      <h1 className="text-red 2xl:mt-28 mt-20 md:text-[36px] 2xl:text-[56px] text-[28px] font-bold">
         Птички получают скидки:
       </h1>
-      <div className="flex justify-center md:flex-grow flex-wrap items-center 2xl:gap-20 md:gap-15 gap-5 mt-10 md:mt-0">
+      <div className="flex justify-center md:flex-grow flex-wrap items-center 2xl:gap-20 xl:gap-10 gap-5 mt-10 md:mt-0">
         {posters ? (
           posters.map((p) => (
             <img

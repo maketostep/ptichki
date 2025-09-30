@@ -16,7 +16,7 @@ export default function HeroBlock() {
       <div className="flex flex-col md:flex-row w-auto h-auto justify-between items-center md:items-start gap-6 md:gap-0">
         <h4
           className="md:w-[379px] w-full text-header font-bold 
-          text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] 
+          text-[24px] sm:text-[28px] lg:text-[36px] 
           leading-[32px] sm:leading-[36px] md:leading-[40px] lg:leading-[44px] 
           text-center md:text-left break-words select-none"
         >
@@ -58,7 +58,7 @@ export default function HeroBlock() {
           alt="element 2"
         />
         <img
-          className="w-[345px] sm:w-[400px] md:w-[680px] 2xl:w-[910px] md:absolute md:block flex mt-25 md:mt-0 top-[500px] md:top-[280px] lg:top-[310px]"
+          className="w-[345px] sm:w-[400px] xl:w-[680px] 2xl:w-[910px] md:absolute md:block flex mt-25 md:mt-0 top-[500px] md:top-[350px] lg:top-[310px]"
           src={pinkLogo}
           alt="pink logo"
         />
