@@ -43,7 +43,7 @@ export default function PosterBlock() {
         <div className="2xl:mt-20 xl:mt-36 w-full flex flex-col xl:flex-row justify-start">
           <div className="flex flex-col xl:flex-row xl:items-start items-center gap-10 relative">
             <div className="flex justify-start">
-              <div className="w-[320px] sm:w-[340px] md:w-[320px] 2xl:w-[480px] aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
+              <div className="w-[320px] sm:w-[340px] md:w-[320px] xl:w-[420px] 2xl:w-[480px] aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                 {poster ? (
                   <img
                     src={poster}
