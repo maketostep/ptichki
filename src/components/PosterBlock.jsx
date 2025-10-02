@@ -30,7 +30,7 @@ export default function PosterBlock() {
       id="events"
       className="poster-block-bg h-[1080px] relative flex xl:flex-row flex-col justify-center 2xl:px-4 sm:px-6 md:px-10 2xl:py-12"
     >
-      <h2 className="text-white xl:mt-18 2xl:mt-2 2xl:ml-[200px] xl:rotate-[-6deg] text-center font-semibold break-words text-[28px] sm:text-[36px] md:text-[44px] 2xl:text-[56px] leading-tight">
+      <h2 className="text-white mb-10 xl:mb-0 xl:mt-18 2xl:mt-2 2xl:ml-[200px] xl:rotate-[-6deg] text-center font-semibold break-words text-[28px] sm:text-[36px] md:text-[44px] 2xl:text-[56px] leading-tight">
         {secondText}
       </h2>
       <div className="w-full max-w-full flex flex-col items-center xl:mt-48">
