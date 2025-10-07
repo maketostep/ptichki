@@ -44,7 +44,11 @@ export default function PartnersBlock() {
             />
           ))
         ) : (
-          <div>Загрузка...</div>
+          <div className="flex justify-center items-center">
+            <h1 className="font-bold text-green text-2xl hover:scale-105 transform-all duration-300">
+              Скоро тут будут подарки...
+            </h1>
+          </div>
         )}
       </div>
 

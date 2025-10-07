@@ -19,14 +19,14 @@ export default function ContactBlock() {
         <div className="flex md:justify-start justify-center md:mt-5 mt-10 mb-5 gap-2">
           <div
             onClick={() => window.open(telegramButtonUrl, "_blank")}
-            className="flex p-3 md:mb-25 rounded-full"
+            className="flex p-3 md:mb-25 rounded-full cursor-pointer hover:scale-105 transition-transform duration-300"
           >
             <img src={tgIcon} className="h-17.5 w-17.5" />
           </div>
 
           <div
             onClick={() => window.open(vkButtonUrl, "_blank")}
-            className="flex p-3 md:mb-25 rounded-full "
+            className="flex p-3 md:mb-25 rounded-full cursor-pointer hover:scale-105 transition-transform duration-300"
           >
             <img src={vkIcon} className="h-17.5 w-17.5" />
           </div>
