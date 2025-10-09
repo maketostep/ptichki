@@ -6,6 +6,7 @@ export default function DefaultButton({
 }) {
   return (
     <button
+      type="button"
       onClick={handleClick}
       className={`bg-white text-${color} border-${color} border-2 text-${size} px-6 py-4 rounded-full cursor-pointer hover:bg-${color} hover:text-white transition-all duration-300`}
     >
@@ -17,6 +18,7 @@ export default function DefaultButton({
 export function SecondButton({ text, handleClick, size = "2xl" }) {
   return (
     <button
+      type="button"
       onClick={handleClick}
       className={`bg-red text-white text-${size} px-6 py-4 rounded-full cursor-pointer hover:bg-green transition-all duration-300`}
     >

@@ -31,7 +31,6 @@ export default function PartnersAdmin() {
     try {
       await addPartner({ description: desc, url: url, file: file });
 
-      // Сброс состояния и поля выбора файла
       setDesc("");
       setFile(null);
       setUrl("");

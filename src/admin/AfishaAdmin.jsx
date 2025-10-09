@@ -20,6 +20,7 @@ export default function AfishaAdmin() {
   async function loadPosters() {
     try {
       const data = await getPosters();
+      console.log(data);
       setPosters(data);
     } catch (err) {
       setError(err.message || "Не удалось загрузить афишу");
@@ -33,7 +34,6 @@ export default function AfishaAdmin() {
       setDesc("");
       setFile(null);
 
-      // Сбрасываем поле выбора файла
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
@@ -57,7 +57,7 @@ export default function AfishaAdmin() {
     <div>
       <h1 className="text-xl font-bold mb-4">Афиша</h1>
 
-      <form onSubmit={handleSubmit} className="mb-6 space-y-4">
+      <form onSubmit={handleSubmit} className="mb-6 gap-10 space-y-4 space-x-5">
         <textarea
           placeholder="Описание"
           value={desc}

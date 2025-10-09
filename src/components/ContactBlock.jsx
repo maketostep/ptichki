@@ -32,7 +32,11 @@ export default function ContactBlock() {
           </div>
         </div>
 
-        <a className="md:text-[24px] md:text-start text-center text-lg font-semibold underline cursor-pointer">
+        <a
+          href="https://disk.yandex.ru/d/YHc7pjWbCCdgGQ"
+          target="_blank"
+          className="md:text-[24px] md:text-start text-center text-lg font-semibold underline cursor-pointer"
+        >
           Юридическая информация
         </a>
       </div>
