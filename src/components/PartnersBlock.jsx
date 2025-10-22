@@ -82,6 +82,9 @@ export default function PartnersBlock() {
             <p className="mt-5 text-center text-sm underline text-gray-500">
               Не является публичной офертой
             </p>
+            <p className="mt-5 text-center text-md text-gray-500">
+              {selectedPoster?.footer_text}
+            </p>
           </div>
         }
       />

@@ -11,6 +11,7 @@ export default function PartnersAdmin() {
   const [file, setFile] = useState(null);
   const [error, setError] = useState("");
   const [url, setUrl] = useState("");
+  const [footerText, setFooterText] = useState("");
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -29,11 +30,17 @@ export default function PartnersAdmin() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await addPartner({ description: desc, url: url, file: file });
+      await addPartner({
+        description: desc,
+        url: url,
+        file: file,
+        footer_text: footerText,
+      });
 
       setDesc("");
       setFile(null);
       setUrl("");
+      setFooterText("");
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
@@ -74,6 +81,12 @@ export default function PartnersAdmin() {
           onChange={(e) => setUrl(e.target.value)}
           className="flex border p-2 mr-2"
         />
+        <textarea
+          placeholder="Текст снизу кнопки"
+          value={footerText}
+          onChange={(e) => setFooterText(e.target.value)}
+          className="flex border w-[500px] p-2 mr-2"
+        />
         <input
           type="file"
           ref={fileInputRef} // подключаем ref
@@ -112,6 +125,7 @@ export default function PartnersAdmin() {
             >
               {p.partner_url}
             </a>
+            <p>{p.footer_text}</p>
             <button
               onClick={() => handleDelete(p.id)}
               className="bg-red-500 text-white px-3 py-1 rounded"
