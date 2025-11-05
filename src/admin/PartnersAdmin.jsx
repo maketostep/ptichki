@@ -89,7 +89,7 @@ export default function PartnersAdmin() {
         />
         <input
           type="file"
-          ref={fileInputRef} // подключаем ref
+          ref={fileInputRef}
           onChange={(e) => setFile(e.target.files[0])}
           className="mr-2 border-amber-300 border-2 rounded-lg p-2 w-full sm:w-auto"
         />

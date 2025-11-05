@@ -18,7 +18,7 @@ export async function loginUser(login, password) {
     throw new Error("Неверный логин или пароль");
   }
 
-  return res.json(); // { token }
+  return res.json();
 }
 
 export async function fetchWithAuth(url, options = {}) {

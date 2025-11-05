@@ -6,6 +6,7 @@ import Login from "./admin/Login";
 import AdminLayout from "./admin/AdminLayout";
 import AfishaAdmin from "./admin/AfishaAdmin";
 import PartnersAdmin from "./admin/PartnersAdmin";
+import { ModalProvider } from "./context/ModalContext";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <ModalProvider>
+      <RouterProvider router={router} />
+    </ModalProvider>
+  </React.StrictMode>,
 );

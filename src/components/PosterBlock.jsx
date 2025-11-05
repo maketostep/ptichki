@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import MyModal from "./ui/MyModal";
 import { posterConfig } from "./mainConfig";
 import { getPosters } from "../services/postersService";
 import { TelegramButton } from "./ui/MyButtons";
 import MyForm from "./ui/MyForm";
 import cloud from "../assets/posterBlock/cloud.png";
 import aroundPoster from "../assets/img/aroundPoster.png";
+import { useModal } from "../context/ModalContext";
 
 export default function PosterBlock() {
   const [poster, setPoster] = useState(null);
   const [description, setDescription] = useState("");
+  const { openModal } = useModal();
 
   useEffect(() => {
     const posterData = getPosters();
@@ -23,8 +24,11 @@ export default function PosterBlock() {
     });
   }, []);
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const { secondText, actionButtonText } = posterConfig;
+
+  const handleOpenRegistration = () => {
+    openModal(MyForm, { title: "Регистрация" });
+  };
 
   return (
     <section
@@ -73,19 +77,13 @@ export default function PosterBlock() {
               <div className="flex xl:justify-start justify-center">
                 <TelegramButton
                   text={actionButtonText}
-                  handleClick={() => setModalIsOpen(true)}
+                  handleClick={handleOpenRegistration}
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <MyModal
-        modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
-        children={<MyForm closeModal={() => setModalIsOpen(false)} />}
-      />
     </section>
   );
 }

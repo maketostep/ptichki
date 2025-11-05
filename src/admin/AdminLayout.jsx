@@ -10,7 +10,6 @@ export default function AdminLayout() {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-      {/* Сайдбар */}
       <aside
         className="
           w-full md:w-64 
@@ -34,7 +33,6 @@ export default function AdminLayout() {
         </nav>
       </aside>
 
-      {/* Контент */}
       <main className="flex-1 p-4 md:p-6">
         <Outlet />
       </main>

@@ -3,37 +3,29 @@
 
 @font-face {
   font-family: "NimbusSansRound-Regular";
-  src: url("./assets/fonts/NimbusSansRound-Regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("./assets/fonts/NimbusSansRound-Regular.eot");
   src:
     url("./assets/fonts/NimbusSansRound-Regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE < 9 */ url("./assets/fonts/NimbusSansRound-Regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("./assets/fonts/NimbusSansRound-Regular.woff") format("woff"),
-    /* Firefox >= 3.6, any other modern browser */
-      url("./assets/fonts/NimbusSansRound-Regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-      url("./assets/fonts/NimbusSansRound-Regular.svg#NimbusSansRound-Regular")
-      format("svg"); /* Chrome < 4, Legacy iOS */
+    url("./assets/fonts/NimbusSansRound-Regular.woff2") format("woff2"),
+    url("./assets/fonts/NimbusSansRound-Regular.woff") format("woff"),
+    url("./assets/fonts/NimbusSansRound-Regular.ttf") format("truetype"),
+    url("./assets/fonts/NimbusSansRound-Regular.svg#NimbusSansRound-Regular")
+      format("svg");
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("./assets/fonts/Manrope-VariableFontwght.eot"); /* IE 9 Compatibility Mode */
+  src: url("./assets/fonts/Manrope-VariableFontwght.eot");
   src:
     url("./assets/fonts/Manrope-VariableFontwght.eot?#iefix")
       format("embedded-opentype"),
-    /* IE < 9 */ url("./assets/fonts/Manrope-VariableFontwght.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("./assets/fonts/Manrope-VariableFontwght.woff") format("woff"),
-    /* Firefox >= 3.6, any other modern browser */
-      url("./assets/fonts/Manrope-VariableFontwght.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-      url("./assets/fonts/Manrope-VariableFontwght.svg#Manrope-VariableFontwght")
-      format("svg"); /* Chrome < 4, Legacy iOS */
-  font-weight: 100 900; /* от Thin до Black */
+    url("./assets/fonts/Manrope-VariableFontwght.woff2") format("woff2"),
+    url("./assets/fonts/Manrope-VariableFontwght.woff") format("woff"),
+    url("./assets/fonts/Manrope-VariableFontwght.ttf") format("truetype"),
+    url("./assets/fonts/Manrope-VariableFontwght.svg#Manrope-VariableFontwght")
+      format("svg");
+  font-weight: 100 900;
   font-display: swap;
   font-style: normal;
 }
@@ -41,11 +33,6 @@
 html {
   font-family: "Manrope", sans-serif;
 }
-
-/* p,
-span {
-  font-family: "DylanBesawCyrillic-Normal", sans-serif;
-} */
 
 input,
 select {

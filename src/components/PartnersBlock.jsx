@@ -1,16 +1,48 @@
 import { useEffect, useState } from "react";
 import blockFour from "../assets/img/background/blockFour.png";
 import { getPartners } from "../services/partnersService";
-import MyModal from "./ui/MyModal";
+import { useModal } from "../context/ModalContext";
+
+function PartnerModalContent({ poster, closeModal }) {
+  if (!poster) {
+    return null;
+  }
+
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <p className="2xl:text-4xl whitespace-pre-line text-center">
+        {poster.description}
+      </p>
+      <div className="flex justify-center mt-4">
+        <button
+          className="bg-green 2xl:text-3xl hover:bg-red text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
+          onClick={() => {
+            closeModal();
+            window.location.href = window.location.origin + "#events";
+          }}
+        >
+          Стать участником птичек
+        </button>
+        <button
+          onClick={() => window.open(poster.partner_url, "_blank")}
+          className="bg-red 2xl:text-3xl ml-4 hover:bg-green text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
+        >
+          Сайт-партнера
+        </button>
+      </div>
+      <p className="mt-5 text-center text-sm underline text-gray-500">
+        Не является публичной офертой
+      </p>
+      <p className="mt-5 text-center text-md text-gray-500">
+        {poster.footer_text}
+      </p>
+    </div>
+  );
+}
+
 export default function PartnersBlock() {
   const [posters, setPosters] = useState(null);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedPoster, setSelectedPoster] = useState(null);
-
-  const handleClick = (poster) => {
-    setSelectedPoster(poster);
-    setModalIsOpen(true);
-  };
+  const { openModal } = useModal();
 
   useEffect(() => {
     const posterData = getPartners();
@@ -22,6 +54,13 @@ export default function PartnersBlock() {
       }
     });
   }, []);
+
+  const handleClick = (poster) => {
+    openModal(PartnerModalContent, {
+      title: poster?.name,
+      props: { poster },
+    });
+  };
 
   return (
     <div
@@ -51,43 +90,6 @@ export default function PartnersBlock() {
           </div>
         )}
       </div>
-
-      <MyModal
-        modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
-        children={
-          <div className="flex flex-col justify-center items-center">
-            <p className="2xl:text-4xl whitespace-pre-line text-center">
-              {selectedPoster?.description}
-            </p>
-            <div className="flex justify-center mt-4">
-              <button
-                className="bg-green 2xl:text-3xl hover:bg-red text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
-                onClick={() => {
-                  setModalIsOpen(false);
-                  window.location.href = window.location.origin + "#events";
-                }}
-              >
-                Стать участником птичек
-              </button>
-              <button
-                onClick={() =>
-                  window.open(selectedPoster?.partner_url, "_blank")
-                }
-                className="bg-red 2xl:text-3xl ml-4 hover:bg-green text-white cursor-pointer transition-all duration-300 px-6 py-2 rounded-2xl"
-              >
-                Сайт-партнера
-              </button>
-            </div>
-            <p className="mt-5 text-center text-sm underline text-gray-500">
-              Не является публичной офертой
-            </p>
-            <p className="mt-5 text-center text-md text-gray-500">
-              {selectedPoster?.footer_text}
-            </p>
-          </div>
-        }
-      />
     </div>
   );
 }
