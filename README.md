@@ -83,5 +83,5 @@ public/                  # Публичные файлы (favicon, index.html и
 
 Для связи по вопросам разработки и поддержки обращайтесь к владельцу репозитория.
 
-- Telegram — @make2step
+- Telegram — [@make2step](https://t.me/make2step)
 - Email — team@wavewebstudio.ru
